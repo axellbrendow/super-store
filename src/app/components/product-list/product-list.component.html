@@ -1,0 +1,16 @@
+<section class="products">
+  <div class="container">
+
+    <h2 class="subtitle loading" [hidden]="!loading">
+      <br /><br /><br />
+      <span>Carregando <strong>games...</strong></span>
+      <br /><br /><br />
+    </h2>
+
+    <div class="columns is-desktop is-multiline cards-container">
+      <app-product-card *ngFor="let product of items; let i = index" class="column" [product]="product">
+      </app-product-card>
+    </div>
+
+  </div>
+</section>
