@@ -3,7 +3,7 @@ const swBuild = require('workbox-build');
 swBuild.generateSW( // generate service worker
     {
         navigateFallback: 'index.html',
-        globDirectory: './dist/super-store',
+        globDirectory: './dist',
         globPatterns: [
             'index.html',
             '**.js',
@@ -14,7 +14,7 @@ swBuild.generateSW( // generate service worker
             'assets/games/**',
             'manifest.json'
         ],
-        swDest: 'dist/super-store/sw.js',
+        swDest: 'dist/sw.js',
         templatedUrls: {
             '?utm_source=pwa': ['index.html'],
         }
